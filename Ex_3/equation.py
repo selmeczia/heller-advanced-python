@@ -1,16 +1,6 @@
-def equation(string_imput, *args, **kwargs) -> int:
-    """
-    The function calculates the equation from a string. Returns at integer.
-    """
+mapping = {"a": 2, "b": 5, "c": -4, "d": 1}
+equation = "a+b+c+d"
 
-    result = int()
+result = sum([mapping[value] for value in equation.split("+")])
 
-    for arg in args:
-        result += arg
-    for key, value in kwargs.items():
-        result += value
-
-    return result
-
-
-print(equation("a+b+c", 1, -2, 7))
+print(result)
